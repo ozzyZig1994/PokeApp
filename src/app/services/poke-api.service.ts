@@ -10,9 +10,9 @@ export class PokeApiService {
 
   constructor(private http: HttpClient) { }
 
-  public pokemonList(offset: number) {
-    const limit = AppConstants.POKEMEN_PAGE_LIMIT;
-    return this.http.get(AppConstants.API_ENDPOINT, { params: { limit, offset }  });
+  public pokemonList(limit: number) {
+    return this.http
+                .get(AppConstants.API_ENDPOINT, { params: { limit }  });
   }
 
   public selectedPokemonDetails(endpoint: string) {

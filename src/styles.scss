@@ -1,30 +1,40 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+	font-family: "Arcade";
+	src: url('./assets/fonts/ARCADE_R.TTF');
+}
+
+@font-face {
+	font-family: "Arcade title";
+	src: url('./assets/fonts/ARCADE_N.TTF');
+}
+
 html, body {
     background-color: #da1e2d;
     margin: 0;
-}
+	font-family: "Arcade";
+	
+	header {
+		background-color: #d14444;
+		height: 64px;
+		margin-bottom: 6rem;
+	}
+	
+	header::after {
+		border-top: 60px solid #d14444;
+		border-right: 40px solid transparent;
+		content: "";
+		margin-top: 50px;
+		margin-left: -20px;
+		position: absolute;
+		width: 50%;
+	}
 
-header {
-    margin-bottom: 6rem;
-	height: 64px;
-	background-color: #d14444;
-}
-
-header::after {
-    border-top: 60px solid #d14444;
-	border-right: 40px solid transparent;
-	height: 0;
-	width: 50%;
-	position: absolute;
-	content: "";
-	margin-top: 50px;
-	margin-left: -20px;
-}
-
-.nav-buttons {
-    height: 72px;
-	position: absolute;
-	z-index: 9999;
-	margin-top: 15px;
-    margin-left: 15px;
+	.nav-buttons {
+		height: 72px;
+		margin-top: 15px;
+		margin-left: 15px;
+		position: absolute;
+		z-index: 9999;
+	}
 }
