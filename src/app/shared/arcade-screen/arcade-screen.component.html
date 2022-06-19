@@ -1,0 +1,15 @@
+<main role="main">
+    <div class="frame">
+        <div class="screen">
+            <table class="pokemon-list" *ngFor="let pokemon of pokemonList">
+                <tr>
+                    <td>
+                        <a routerLink="/pokemon/{{ pokemon.name }}" class="pokemon-item">
+                            {{ pokemon.name }} <span>&#62;</span>
+                        </a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</main>

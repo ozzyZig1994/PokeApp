@@ -13,14 +13,10 @@ export class PokemonListComponent implements OnInit {
   constructor(private pokeApi: PokeApiService) { }
 
   ngOnInit(): void {
-    this.pokeApi.pokemonList(5).subscribe((data: any) => {
+    this.pokeApi.pokemonList(10).subscribe((data: any) => {
       console.log(data.results);
       this.pokemonList = data.results;
     });
-  }
-
-  public selectedPokemon(pokemonName: string): void {
-    console.log(pokemonName);
   }
 
 }

@@ -1,13 +1,1 @@
-<main role="main">
-    <div class="frame">
-        <div class="screen">
-            <table class="pokemon-list" *ngFor="let pokemon of pokemonList">
-                <tr>
-                    <td class="pokemon-item" (click)="selectedPokemon(pokemon.name)">
-                        {{ pokemon.name }} <span>&#62;</span>
-                    </td>
-                </tr>
-            </table>
-        </div>
-    </div>
-</main>
+<arcade-screen [pokemonList]="pokemonList"></arcade-screen>
