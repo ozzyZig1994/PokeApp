@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 
 @Component({
   selector: 'arcade-screen',
@@ -8,8 +7,12 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 })
 export class ArcadeScreenComponent implements OnInit {
   @Input('pokemonList') pokemonList: any;
+  @Input('pokemonName') pokemonName: string = '';
+  @Input('pokemonImage') pokemonImage: string = '';
+  @Input('pokemonAbilities') pokemonAbilities: any = [];
 
-  constructor(private route: Router) { }
+
+  constructor() { }
 
   ngOnInit(): void {
   }

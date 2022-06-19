@@ -48,8 +48,42 @@ main {
                 transform: rotate(-45deg);
                 -webkit-transform: rotate(-45deg);
             }
+
+            .container {
+                display: flex;
+                height: 100%;
+                width: 100%;
+
+                .picture {
+                    align-items: center;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    width: 50%;
+
+                    .pokemonImg { width: 80%; }
+                }
+
+                .info {
+                    align-items: center;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    width: 50%;
+                }
+
+                .info > a { color: black; margin-bottom: 70px; }
+            }
         }
     }
-    
 }
 
+@media only screen and (max-width: 900px) {
+    .container {
+        align-items: center;
+        flex-direction: column; 
+        justify-content: space-between;
+
+        .pokemonImg { width: 100%; }
+    }
+}

@@ -11,11 +11,10 @@ export class PokeApiService {
   constructor(private http: HttpClient) { }
 
   public pokemonList(limit: number) {
-    return this.http
-                .get(AppConstants.API_ENDPOINT, { params: { limit }  });
+    return this.http.get(AppConstants.API_ENDPOINT, { params: { limit }  });
   }
 
-  public selectedPokemonDetails(endpoint: string) {
-    
+  public selectedPokemonDetails(pokemon: string) {
+    return this.http.get(`${AppConstants.API_ENDPOINT}${pokemon}`);
   }
 }
