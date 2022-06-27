@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 
+import * as Content from '../../../assets/content.json';
+
 @Component({
   selector: 'arcade-screen',
   templateUrl: './arcade-screen.component.html',
@@ -11,8 +13,9 @@ export class ArcadeScreenComponent implements OnInit {
   @Input('pokemonImage') pokemonImage: string = '';
   @Input('pokemonAbilities') pokemonAbilities: any = [];
 
+  public contentData: any;
 
-  constructor() { }
+  constructor() { this.contentData = Content }
 
   ngOnInit(): void {
   }

@@ -2,7 +2,7 @@
     <div class="frame">
         <div class="screen">
             <table class="pokemon-list" *ngIf="pokemonList; else elseBlock">
-                <tr><th>Pokemon List</th></tr>
+                <tr><th>{{ contentData.pokemonListTitle }}</th></tr>
                 <tr *ngFor="let pokemon of pokemonList">
                     <td>
                         <a routerLink="/pokemon/{{ pokemon.name }}" class="pokemon-item">
@@ -12,20 +12,19 @@
                 </tr>
             </table>
             <ng-template #elseBlock>
-                <div class="container" *ngIf="pokemonName">
+                <div class="container">
                     <div class="picture">
                         <p>{{ pokemonName }}</p>
                         <img src="{{ pokemonImage }}" class="pokemonImg">
-                        <ng-template #shimmer></ng-template>
                     </div>
                     <div class="info">
-                        <p>Abilities</p>
+                        <p>{{ contentData.pokemonAbilitiesTitle }}</p>
                         <ul>
                             <li *ngFor="let pokemonAbility of pokemonAbilities">
                                 {{ pokemonAbility.ability.name }}
                             </li>
                         </ul>
-                        <a routerLink="/pokemon-list">Back</a>
+                        <a routerLink="/pokemon-list">{{ contentData.backButtonText }}</a>
                     </div>
                 </div>
             </ng-template>
