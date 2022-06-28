@@ -1,6 +1,11 @@
 # PokemonApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.2.
+A small app I developed in Angular using the https://pokeapi.co/ API.
+
+It only shows the list of pokemon that exist in the API in a screen that emulates a gameboy screen and with a font similar to the one used in arcades.
+
+Selecting a pokemon from the list shows the pokemon's image and its abilities. For now that's all it does, I hope to add more features later. 
+
 
 ## Development server
 
