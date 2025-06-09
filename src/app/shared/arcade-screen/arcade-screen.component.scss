@@ -51,17 +51,19 @@ main {
 
             .container {
                 display: flex;
+                flex: 1;
                 height: 100%;
+                justify-content: center;
                 width: 100%;
+                overflow-y: hidden;
 
                 .picture {
                     align-items: center;
                     display: flex;
+                    flex: 1;
                     flex-direction: column;
-                    justify-content: space-between;
-                    width: 50%;
 
-                    .pokemonImg { width: 80%; }
+                    .pokemonImg { width: 60%; }
                 }
 
                 .info {

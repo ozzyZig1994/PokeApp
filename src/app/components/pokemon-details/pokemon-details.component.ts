@@ -19,7 +19,7 @@ export class PokemonDetailsComponent implements OnInit {
     this.route.params.subscribe(params => {
       this.pokemonName = params['pokemon'];
       this.pokeApi.selectedPokemonDetails(params['pokemon']).subscribe((data: any) => {
-        this.pokemonImage = data.sprites.front_default;
+        this.pokemonImage = data.sprites.other.showdown.front_default;
         this.pokemonAbilities = data.abilities;
       });
     });
